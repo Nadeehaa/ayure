@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>🌿Buy Herbs🌿</title>
+</head>
+<body>
+    <header>
+        <h1>🌿Farm Fresh Herbs🌿</h1>
+        <h3>Harvested with Care, Delivered with Trust</h3>
+    </header>
+
+    <div class="product-container">
+        <div id="productGrid" class="product-grid"></div>
+    </div>
+
+    <!-- Cart Icon -->
+    <div class="cart-icon" onclick="toggleCart()">
+        🛒
+    </div>
+
+    <!-- Cart Popup -->
+    <div id="cartPopup" class="cart-popup">
+        <h2>🛒 Cart</h2>
+        <ul id="cartItems"></ul>
+        <p id="totalPrice">Total: ₹0</p>
+    </div>
+
+    <!-- Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

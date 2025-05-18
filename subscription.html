@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="subscription.css" />
+  <title>EcoAyur | Subscription Plans</title>
+</head>
+<body>
+  <header>
+    <h1>🌿 EcoAyur Subscription Plans 🌿</h1>
+    <p>Experience Ayurveda the natural way. Choose your plan and start your journey.</p>
+  </header>
+
+  <div class="subscription-container">
+    <!-- Free Tier Box -->
+    <div class="box free-tier">
+      <h2>🌱Free Tier </h2>
+      <ul>
+        <li>✅ Symptom Checker</li>
+        <li>✅ Basic Remedy Information</li>
+        <li>✅ Blog Access</li>
+      </ul>
+      <p class="price">Price: ₹0/month</p>
+      <button onclick="subscribe('Free Tier')">Get Started</button>
+    </div>
+
+    <!-- Premium Tier Box -->
+    <div class="box premium-tier">
+      <span class="most-bought">Most Bought</span>
+      <h2> 🌟 Premium Tier </h2>
+      <ul>
+        <li>✨ Personalized Herbal Plans</li>
+        <li>✨ Curated Herbal Kits (Delivered Monthly)</li>
+        <li>✨ Access to Expert Herbalists</li>
+        <li>✨ Monthly & Annual Subscriptions Available</li>
+      </ul>
+      <p class="price">Price: ₹199/month or ₹1999/year</p>
+      <button onclick="openModal()">Subscribe Now</button>
+    </div>
+  </div>
+
+  <!-- Testimonial Section -->
+  <section class="testimonial slide-in">
+    <h2>💬 What Our Users Say 🤗</h2>
+    <div class="testimonial-box">
+      <p>"EcoAyur's premium plan brought Ayurveda right to my doorstep. The herbal kits are amazing!"</p>
+      <span>- Ayesha, Hyderabad</span>
+    </div>
+    <div class="testimonial-box">
+      <p>"I love the symptom checker! It really helps me find remedies fast."</p>
+      <span>- Rahul, Bangalore</span>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq slide-in">
+    <h2>❓ Frequently Asked Questions🤔</h2>>
+    <div class="faq-item" onclick="toggleFAQ(this)">
+      <h3>How does the Premium Plan work?</h3>
+      <p class="faq-answer">Our Premium Plan delivers personalized herbal kits monthly, along with access to expert consultations.</p>
+    </div>
+    <div class="faq-item" onclick="toggleFAQ(this)">
+      <h3>Can I cancel anytime?</h3>
+      <p class="faq-answer">Yes, you can cancel your subscription anytime through your account settings.</p>
+    </div>
+    <div class="faq-item" onclick="toggleFAQ(this)">
+      <h3>Are the herbs organically sourced?</h3>
+      <p class="faq-answer">Yes, all herbs are 100% organic and ethically sourced from verified farmers.</p>
+    </div>
+  </section>
+
+  <!-- Modal for Premium Subscription -->
+  <div id="subscriptionModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+        <h2>🌟Premium Tier Subscription</h2>
+      <form id="subscriptionForm">
+        <input type="text" id="subscriberName" placeholder="Your Name" required />
+        <input type="text" id="subscriberAddress" placeholder="Your Address" required />
+        <input type="text" id="subscriberPhone" placeholder="Phone Number" required />
+
+        <select id="planType" required>
+          <option value="monthly">Monthly Plan - ₹199/month</option>
+          <option value="annual">Annual Plan - ₹1999/year</option>
+        </select>
+
+        <button type="submit">Subscribe Now</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="subscription.js"></script>
+</body>
+</html>

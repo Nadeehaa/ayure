@@ -1,0 +1,197 @@
+/* General Styling */
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url('images/subscription.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+/* Header Styling */
+header {
+    background-color: rgba(46, 125, 50, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Subscription Container */
+.subscription-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+/* Box Styling */
+.box {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: black;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Most Bought Tag */
+.most-bought {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #e91e63;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    animation: pop-in 0.5s ease-in-out;
+}
+
+/* Pop-in Animation */
+@keyframes pop-in {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Premium Tier Special Styling */
+.premium-tier {
+    border: 2px solid gold;
+    background: linear-gradient(145deg, #fff8e1, #ffe0b2);
+}
+
+.premium-tier:hover {
+    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
+}
+
+/* Button Styling */
+button {
+    margin-top: 10px;
+    background-color: #2e7d32;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #256524;
+    transform: scale(1.05);
+}
+
+/* Testimonial & FAQ Section Slide Animation */
+.slide-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Testimonial Section */
+.testimonial {
+    margin-top: 30px;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.testimonial-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 10px auto;
+    width: 50%;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    color: black;
+}
+
+.testimonial-box p {
+    font-style: italic;
+}
+
+/* FAQ Section */
+.faq {
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    color: black;
+}
+
+/* FAQ Item Styling */
+.faq-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.faq-item:hover {
+    background-color: #e8f5e9;
+    color: #388e3c;
+}
+
+.faq-answer {
+    display: none;
+    padding: 5px 0 10px 0;
+    font-weight: normal;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color:goldenrod;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+}
+
+.close {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
